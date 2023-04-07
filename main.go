@@ -7,8 +7,8 @@ import (
 )
 
 func main() {
-	keyword := "Dubai"
-	url := "https://landscape.cncf.io/members"
+	keyword := "\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}\b"
+	url := "https://landscape.cncf.io/"
 
 	links, err := geturl.ExtractExternalLinks(url)
 	if err != nil {
